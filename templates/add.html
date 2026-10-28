@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Add Record{% endblock %}
+
+{% block content %}
+<a href="/" class="back-btn">← Back to Home</a>
+
+<h2>Add New Student Record</h2>
+<form action="/add" method="POST">
+    <input type="text" name="roll" placeholder="Roll Number (e.g., 101)" required>
+    <input type="text" name="name" placeholder="Student Name" required>
+    <input type="number" name="maths" placeholder="Maths Marks (0-100)" min="0" max="100" required>
+    <input type="number" name="physics" placeholder="Physics Marks (0-100)" min="0" max="100" required>
+    <input type="number" name="chemistry" placeholder="Chemistry Marks (0-100)" min="0" max="100" required>
+    <button type="submit">Add Record</button>
+</form>
+{% endblock %}
